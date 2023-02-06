@@ -3,5 +3,4 @@
 kubeadm init --apiserver-advertise-address $(hostname -i)
 mkdir -p $HOME/.kube
 chown $(id -u):$(id -g) $HOME/.kube/config
-kubectl apply -n kube-system -f \
-    "https://github.com/weaveworks/scope/releases/download/v1.13.2/k8s-scope.yaml"
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
